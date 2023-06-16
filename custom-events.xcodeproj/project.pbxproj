@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		75EAE7C72A35267B003FE167 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EAE7C62A35267B003FE167 /* main.swift */; };
+		75EAE7C72A35267B003FE167 /* CustomEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EAE7C62A35267B003FE167 /* CustomEvents.swift */; };
+		75EAE7CF2A3526A3003FE167 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 75EAE7CE2A3526A3003FE167 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,8 @@
 
 /* Begin PBXFileReference section */
 		75EAE7C32A35267B003FE167 /* custom-events */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "custom-events"; sourceTree = BUILT_PRODUCTS_DIR; };
-		75EAE7C62A35267B003FE167 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		75EAE7C62A35267B003FE167 /* CustomEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEvents.swift; sourceTree = "<group>"; };
+		75EAE7D02A3526B0003FE167 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EAE7CF2A3526A3003FE167 /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +44,7 @@
 		75EAE7BA2A35267B003FE167 = {
 			isa = PBXGroup;
 			children = (
+				75EAE7D02A3526B0003FE167 /* README.md */,
 				75EAE7C52A35267B003FE167 /* custom-events */,
 				75EAE7C42A35267B003FE167 /* Products */,
 			);
@@ -57,7 +61,7 @@
 		75EAE7C52A35267B003FE167 /* custom-events */ = {
 			isa = PBXGroup;
 			children = (
-				75EAE7C62A35267B003FE167 /* main.swift */,
+				75EAE7C62A35267B003FE167 /* CustomEvents.swift */,
 			);
 			path = "custom-events";
 			sourceTree = "<group>";
@@ -78,6 +82,9 @@
 			dependencies = (
 			);
 			name = "custom-events";
+			packageProductDependencies = (
+				75EAE7CE2A3526A3003FE167 /* ArgumentParser */,
+			);
 			productName = "custom-events";
 			productReference = 75EAE7C32A35267B003FE167 /* custom-events */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +113,9 @@
 				Base,
 			);
 			mainGroup = 75EAE7BA2A35267B003FE167;
+			packageReferences = (
+				75EAE7CD2A3526A2003FE167 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = 75EAE7C42A35267B003FE167 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,7 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75EAE7C72A35267B003FE167 /* main.swift in Sources */,
+				75EAE7C72A35267B003FE167 /* CustomEvents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +190,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -237,7 +247,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -251,6 +261,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z375TYY86Z;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.toplessbanana.custom-events";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -262,6 +273,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z375TYY86Z;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.toplessbanana.custom-events";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -289,6 +301,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		75EAE7CD2A3526A2003FE167 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75EAE7CE2A3526A3003FE167 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75EAE7CD2A3526A2003FE167 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75EAE7BB2A35267B003FE167 /* Project object */;
 }
